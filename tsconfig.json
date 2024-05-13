@@ -1,0 +1,51 @@
+{
+    "compilerOptions": {
+        "target": "ES2016",
+        "module": "commonjs",
+        "strict": true,
+        "experimentalDecorators": true,
+        "strictPropertyInitialization": false,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "noImplicitAny": true,
+        "outDir": "dist",
+        "baseUrl": ".",
+        "paths": {
+            "@/*": [
+                "*"
+            ],
+            "@src/*": [
+                "src/*"
+            ],
+            "@exceptions/*": [
+                "src/exceptions/*"
+            ],
+            "@utils/*": [
+                "src/utils/*"
+            ],
+            "@types/*": [
+                "src/types/*"
+            ],
+            "@middlewares/*": [
+                "src/middlewares/*"
+            ],
+            "@interfaces/*": [
+                "src/interfaces/*"
+            ],
+            "@config/*": [
+                "src/config/*"
+            ],
+            "@app/*": [
+                "src/app/*"
+            ]
+        }
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist"
+    ]
+}
