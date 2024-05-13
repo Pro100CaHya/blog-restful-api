@@ -4,6 +4,7 @@ import App from "@app/index";
 
 import { MongoConfig } from "@config/index";
 import { UserController } from "@src/users";
+import { PostController } from "@src/posts";
 import { validateEnv } from "@utils/index";
 
 const {
@@ -25,7 +26,8 @@ const mongoConfig = new MongoConfig(
 
 const app = new App(
     [
-        new UserController()
+        new UserController(),
+        new PostController()
     ],
     mongoConfig,
     PORT
