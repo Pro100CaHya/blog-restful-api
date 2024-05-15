@@ -28,10 +28,7 @@ class UserService {
         });
 
         return {
-            ...createdUser.toJSON(),
-            password: undefined,
-            createdAt: undefined,
-            updatedAt: undefined
+            ...createdUser.toJSON()
         };
     }
 
