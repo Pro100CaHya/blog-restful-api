@@ -3,6 +3,7 @@ class HttpException extends Error {
     public message: string;
 
     constructor(statusCode: number, message: string) {
+        console.log("HttpException constructor");
         super(message);
 
         this.statusCode = statusCode;

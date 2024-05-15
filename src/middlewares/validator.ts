@@ -5,6 +5,7 @@ import { HttpException } from "@exceptions/index";
 
 function validatorMiddleware(dto: any, skipMissingProperties = false) {
     return function(request: Request, response: Response, next: NextFunction) {
+        console.log("Validator middleware...");
         validate(plainToInstance(dto, request.body), {
             skipMissingProperties
         })

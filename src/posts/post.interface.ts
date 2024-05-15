@@ -2,7 +2,7 @@ interface IPost {
     _id?: String;
     title: String;
     content: String;
-    userId: String;
+    user?: String;
     createdAt?: Date;
     updatedAt?: Date;
 }

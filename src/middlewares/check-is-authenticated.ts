@@ -7,6 +7,7 @@ import { IJwtPayload, IRequestWithUser } from "@interfaces/index";
 import { UserModel } from "@src/users/index";
 
 async function checkIsAuthenticated(request: IRequestWithUser, response: Response, next: NextFunction) {
+    console.log("Auth middleware")
     const { authorization } = request.headers;
 
     const jwtToken = authorization?.split(" ");

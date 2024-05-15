@@ -7,17 +7,13 @@ import {
 class PostDto {
     @IsString()
     @IsNotEmpty()
-    @Length(255)
+    @Length(10, 255)
     public title: string;
 
     @IsString()
     @IsNotEmpty()
-    @Length(2047)
+    @Length(10, 2047)
     public content: string;
-
-    @IsString()
-    @IsNotEmpty()
-    public userId: string;
 }
 
 export {

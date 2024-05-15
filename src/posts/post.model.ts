@@ -16,10 +16,13 @@ const PostSchema = new mongoose.Schema(
             ref: "User",
             type: mongoose.Schema.Types.ObjectId
         }
+    },
+    {
+        timestamps: true
     }
 );
 
-const PostModel = mongoose.model<IPost>("Post", PostSchema);
+const PostModel = mongoose.model<IPost & mongoose.Document>("Post", PostSchema);
 
 export {
     PostModel

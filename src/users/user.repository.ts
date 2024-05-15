@@ -30,7 +30,16 @@ class UserRepository {
 
     public async updateUser(id: string, userData: IUser) {
         try {
-            return await this.user.findByIdAndUpdate(id, userData, { new: true });
+            return await this.user.findByIdAndUpdate(id,
+                {
+                    $set: {
+                        updatedAt: new Date(),
+                        ...userData,
+                    }
+                },
+                {
+                    new: true
+                });
         } catch (error) {
             throw error;
         }
